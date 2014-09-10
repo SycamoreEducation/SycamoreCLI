@@ -1,19 +1,24 @@
-var config = {
+{
+    "users": {
+        "default": {
+            "token": "DEFAULT_TOKEN",
+            "userid": "12456",
+            "familyid": "0",
+            "studentid": "0"
+        },
 
-    "employee": {
-        "token": "zebra",
-        "userid": "124",
-        "familyid": "0",
-        "studentid": "0"
-    },
+        "employee": {
+            "token": "zebra",
+            "userid": "124",
+            "familyid": "0",
+            "studentid": "0"
+        },
 
-    "student": {
-        "token": "giganormous",
-        "userid": "1244545454",
-        "familyid": "2323232",
-        "studentid": "2"
+        "student": {
+            "token": "giganormous",
+            "userid": "1244545454",
+            "familyid": "2323232",
+            "studentid": "2"
+        }
     }
-
 }
-
-exports.config;

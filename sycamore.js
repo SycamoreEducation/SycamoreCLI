@@ -14,7 +14,13 @@ if(!program.args.length){
 }else{
     var endpoint = program.args;
 
-    console.log( process.env.npm_package_config_employee );
+    if(!program.user){
+        var token = config.users.default.token;
+    }else{
+        var token = config.users[program.user].token;
+    }
+
+    console.log("Token is: " + token);
 
     request({
         
@@ -22,10 +28,13 @@ if(!program.args.length){
         headers: {
             "Authorization": "Bearer 1234567890"
         },
-        url: "https://aap.sycamoreeducation.com/api/v1/"+endpoint
+        url: "https://app.sycamoreeducation.com/api/v1/"+endpoint
     
     }, function(error, response, body){
-        
+    
+        console.log(error);
+        console.log(body);
+    
         if(!error && response.statusCode == 200){
             console.log(body);
         }else if(error){
