@@ -1,0 +1,33 @@
+{
+  "name": "sycamorecli",
+  "version": "0.0.1",
+  "description": "A command line interface for the Sycamore School API",
+  "author": "The Brock Ellis <brock@sharproot.com> (http://thebrockellis.com)",
+  "keywords": [
+    "sycamore",
+    "education",
+    "school",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheBrockEllis/SycamoreCLI"
+  },
+  "preferGlobal": "true",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "commander": "^2.3.0",
+    "request": "^2.42.0"
+  },
+  "bin": {
+    "sycamore": "sycamore.js"
+  },
+  "config": {
+    "employee": {
+      "tokens": "ACCESS_TOKEN",
+      "userid": "USERID"
+    }
+  }
+}
