@@ -20,20 +20,17 @@ if(!program.args.length){
         var token = config.users[program.user].token;
     }
 
-    console.log("Token is: " + token);
+    console.log("Fetching endpoint " + endpoint + " with token " + token);
 
     request({
         
         method: "GET",
         headers: {
-            "Authorization": "Bearer 1234567890"
+            "Authorization": "Bearer " + token
         },
         url: "https://app.sycamoreeducation.com/api/v1/"+endpoint
     
     }, function(error, response, body){
-    
-        console.log(error);
-        console.log(body);
     
         if(!error && response.statusCode == 200){
             console.log(body);
