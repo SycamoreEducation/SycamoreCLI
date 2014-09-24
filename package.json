@@ -18,16 +18,13 @@
     "node": ">=0.10"
   },
   "dependencies": {
+    "cli-config": "^0.4.2",
     "commander": "^2.3.0",
-    "request": "^2.42.0"
+    "prettyjson": "^1.0.0",
+    "request": "^2.42.0",
+    "userhome": "^1.0.0"
   },
   "bin": {
     "sycamore": "sycamore.js"
-  },
-  "config": {
-    "employee": {
-      "tokens": "ACCESS_TOKEN",
-      "userid": "USERID"
-    }
   }
 }
