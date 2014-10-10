@@ -20,6 +20,7 @@ program
     .version('0.0.1')
     .usage('<endpoint>')
     .option('-u, --user [string]', 'Which user to send the request as')
+    .option('-d, --dev', 'Indicate that the development endpoints should be used')
     .option('-t, --token [string]', 'Specific token to use for this request')
     .option('-v, --verbose', 'Display additional details about request')
     .parse(process.argv);
@@ -49,10 +50,16 @@ if(!program.args.length){
         var token = program.token;
     }
     
+    if(program.dev)
+        var url = "http://dev.sycamoreeducation.com/api/v1/"+endpoint
+    else
+        var url = "https://app.sycamoreeducation.com/api/v1/"+endpoint
+
     if(program.verbose){
-        console.log("Fetching endpoint " + endpoint);
+        console.log("Fetching data from  " + url);
         console.log("Using token " + token);
     }
+
 
     request({
         
@@ -60,7 +67,7 @@ if(!program.args.length){
         headers: {
             "Authorization": "Bearer " + token
         },
-        url: "http://dev.sycamoreeducation.com/api/v1/"+endpoint
+        url: url
     
     }, function(error, response, body){
     

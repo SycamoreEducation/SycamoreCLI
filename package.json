@@ -1,6 +1,6 @@
 {
   "name": "sycamorecli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A command line interface for the Sycamore School API",
   "author": "The Brock Ellis <brock@sharproot.com> (http://thebrockellis.com)",
   "keywords": [
